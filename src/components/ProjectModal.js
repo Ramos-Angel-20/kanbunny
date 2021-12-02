@@ -7,11 +7,18 @@ import {
     ModalBody,
     ModalCloseButton,
     Button,
-    Input
+    Input,
+    FormControl,
+    FormLabel
 } from '@chakra-ui/react'
+
+import useInput from '../hooks/use-input';
 
 
 const ProjectModal = ({ isOpen, onClose }) => {
+
+
+
     return (
         <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={false}>
             <ModalOverlay />
@@ -22,15 +29,24 @@ const ProjectModal = ({ isOpen, onClose }) => {
                 <ModalCloseButton />
 
                 <ModalBody>
-                    <Input type='file'/>
+
+                    <FormControl>
+                        <FormLabel>Your project title:</FormLabel>
+                        <Input type='text' placeholder='An awesome name!' />
+                    </FormControl>
+
+                    <FormControl>
+                        <FormLabel>Your thumbnail:</FormLabel>
+                        <Input type='file' />
+                    </FormControl>
+
                 </ModalBody>
 
-                <ModalFooter>
+                <ModalFooter width='full' justifyContent='space-between'>
                     <Button
-                        backgroundColor='green.300'
-                        color='white'
+                        colorScheme='green'
                     >
-                        Add
+                        Create!
                     </Button>
                     <Button variant='ghost' onClick={onClose} >Cancel</Button>
                 </ModalFooter>

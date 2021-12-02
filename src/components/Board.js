@@ -4,10 +4,13 @@ import { HStack, VStack, Flex, Container } from '@chakra-ui/react';
 import BoardList from './BoardList';
 import AddTask from './AddTask';
 
-const columnOrder = ['1', '2', '3'];
+import initialData from '../initialData';
 
 
 const Board = () => {
+
+    const { columnOrder, tasks, columns } = initialData;
+
     return (
         <Container minW='full' minH='100vh'>
             <DragDropContext onDragEnd={e => console.log(e)} >
@@ -15,13 +18,17 @@ const Board = () => {
                     {(provided, snapshot) => (
                         <Flex ref={provided.innerRef} {...provided.droppableProps} minH='100vh' minW='full' backgroundColor='blue' >
                             {columnOrder.map((columnId, index) => {
+
+                                const column = columns[columnId];
+                                const relatedTasks = column.tasksIds.map(id => tasks[id]);
+
                                 return (
-                                    <BoardList columnId={columnId} index={index}/>
+                                    <BoardList key={column.id} column={column} tasks={relatedTasks} index={index} />
                                 );
                             })}
-                            <AddTask/>
-                        </Flex>              
-                        
+                            <AddTask />
+                        </Flex>
+
                     )}
                 </Droppable>
 

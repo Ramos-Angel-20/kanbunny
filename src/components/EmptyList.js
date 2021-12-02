@@ -11,7 +11,6 @@ const EmptyList = () => {
         <Flex
             direction='column'
             align='center'
-            justify='center'
             color='gray.400'
             shadow='lg'
             border='1px solid lightgray'
@@ -23,7 +22,10 @@ const EmptyList = () => {
         >
             <IoBulbSharp style={{ fontSize: '100px' }} />
             <Heading w='full' textAlign='center' >Looks like you dont have any boards yet...</Heading>
-            <Button backgroundColor='green.300' color='white' onClick={() => onOpen()} >Create one</Button>
+            <Button 
+                colorScheme='green'
+                
+                onClick={() => onOpen()} >Create one</Button>
             <ProjectModal isOpen={isOpen} onClose={onClose} />
         </Flex>
     )
