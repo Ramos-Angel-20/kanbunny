@@ -17,7 +17,7 @@ const AuthPage = () => {
 
 
     return (
-        <Flex minH='100vh' maxH='auto' back>
+        <Flex minH='100vh' maxH='auto'>
             <VStack w='8xl' minH='full'>
                 <Container maxW='container.sm' h='full' py={['20px', 0, 0, 0]}>
                     {isRegistered ? <LoginForm toggleMode={toggleRegister} /> : <RegisterForm toggleMode={toggleRegister} />}

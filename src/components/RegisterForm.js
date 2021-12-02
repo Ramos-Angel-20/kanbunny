@@ -58,7 +58,7 @@ const RegisterForm = ({ toggleMode }) => {
             <Text>or continue with...</Text>
 
             <Button leftIcon={<FcGoogle />} w='full' _hover={{
-                background: "#1e90ff",
+                background: "#216bdb",
                 color: 'white',
                 boxShadow: 'base',
             }}>Register with Google</Button>

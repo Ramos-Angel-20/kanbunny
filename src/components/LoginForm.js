@@ -16,7 +16,7 @@ const LoginForm = ({ toggleMode }) => {
                     </Tooltip>
                     Kanbunny
                 </Heading>
-                <Text fontSize='3xl' fontWeight='900'>Sign in to your account</Text>
+                <Text fontSize='3xl' fontWeight='900' textAlign='center'>Sign in to your account</Text>
             </Flex>
 
             <Button onClick={toggleMode} variant='link' color='red.600' fontWeight='600' href='/register'>Need an accout? Get One for free!</Button>
@@ -34,7 +34,7 @@ const LoginForm = ({ toggleMode }) => {
             <Text>or continue with...</Text>
 
             <Button leftIcon={<FcGoogle />} w='full' _hover={{
-                background: "#1e90ff",
+                background: "#216bdb",
                 color: 'white',
                 boxShadow: 'base',
             }}>Sign in with Google</Button>
