@@ -7,7 +7,7 @@ const ProjectsPage = () => {
     return (
         <Flex direction='column' minH='100vh'>
             <Navbar />
-            <Flex w='90%' maxW='1800px' minH='full' flex={1} margin='0 auto' justify='center' >
+            <Flex w='90%' maxW='1800px' minH='full' maxH='full' flexShrink={0} flex={1} margin='0 auto' justify='center' >
                 <ProjectsDisplay/>
             </Flex>
         </Flex>

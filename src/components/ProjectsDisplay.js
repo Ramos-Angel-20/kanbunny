@@ -1,17 +1,21 @@
-import { Flex } from '@chakra-ui/react';
+import { Flex, HStack } from '@chakra-ui/react';
 
 import EmptyList from './EmptyList';
 import initialData from '../initialData';
 import ProjectsList from './ProjectsList';
+import ProjectsSidebar from './ProjectsSidebar';
 
 const ProjectsDisplay = () => {
-    
+
     const { projects } = initialData;
 
     return (
-        <Flex minH='full' align='center' w='full' justifyContent='center'>
-            {projects.length < 1 ? <EmptyList/> : <ProjectsList/>}
-        </Flex>
+        <HStack minH='full' w='full' maxH='full' flex={1} align='center'>
+            <ProjectsSidebar />
+            <Flex h='full' w='full' align='center' justify='center'>
+                {projects.length < 1 ? <EmptyList /> : <ProjectsList />}
+            </Flex>
+        </HStack>
     );
 }
 

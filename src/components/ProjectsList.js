@@ -1,4 +1,4 @@
-import { Flex, Grid, Box } from '@chakra-ui/react';
+import { Flex, Grid, Box, VStack } from '@chakra-ui/react';
 
 import ProjectItem from './ProjectItem';
 
@@ -9,11 +9,11 @@ const ProjectsList = () => {
     const { projects } = initialData;
 
     return (
-        <Flex minH='full' w='full' justifyContent='center'>
-            <Grid templateColumns='repeat(4, 1fr)' gap={6} minH='full' minW='full' p={4} overflowY='auto'>
+        <VStack minH='100%' maxW='full' flex={1} maxH='calc(100vh - 60px)' >
+            <Grid templateColumns='repeat(4, 1fr)' gap={6} minW='full' p={4} overflowY='auto' >
                 {projects.map((project) => <ProjectItem project={project} />)}
             </Grid>
-        </Flex>
+        </VStack>
     );
 }
 
