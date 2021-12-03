@@ -16,8 +16,7 @@ import { IoMdMoon } from 'react-icons/io';
 import { BiLogOut, BiUser, BiChevronDown } from 'react-icons/bi';
 import { BsFillSunFill } from 'react-icons/bs';
 
-import icon from '../assets/Kanbunny.svg';
-import iconBg from '../assets/kanbunnyBg.svg'
+import iconBg from '../assets/KanbunnyIconBack2.svg'
 
 const Navbar = () => {
 
@@ -29,8 +28,7 @@ const Navbar = () => {
             <Container maxW='1800px' w='90%'>
                 <Flex minW='full' px={0} py={2} align='center' justify='space-between'>
                     <Flex>
-                        <img src={iconBg} alt='Kanbunny' style={{ width: '40px', margin: '0 5px', cursor: 'pointer' }} />
-                        
+                        <img src={iconBg} alt='Kanbunny' style={{ width: '40px', cursor: 'pointer' }} />
                     </Flex>
 
 
