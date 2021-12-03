@@ -1,4 +1,4 @@
-import { VStack, Box, HStack, useColorModeValue, Text } from '@chakra-ui/react';
+import { VStack, HStack, useColorModeValue, Text } from '@chakra-ui/react';
 import { HiViewBoards } from 'react-icons/hi';
 import { IoIosJournal } from 'react-icons/io';
 
