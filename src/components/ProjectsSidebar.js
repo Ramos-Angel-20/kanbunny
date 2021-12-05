@@ -10,11 +10,11 @@ const ProjectsSidebar = () => {
         <VStack flexShrink={0} paddingY={4} width='full' height='full' maxW={{ base: 56, '2xl': 72 }} justify='flex-start' maxH='full' >
             <HStack w='full' borderRadius='md' flex={1} maxH='50px' p={2} backgroundColor={containerBgColor} cursor='pointer'>
                 <HiViewBoards/>
-                <Text fontWeight='600'>Kanban Boards</Text>
+                <Text fontWeight='600' fontSize='18px' >Kanban Boards</Text>
             </HStack>
             <HStack w='full' borderRadius='md' flex={1} maxH='50px' p={2} backgroundColor={containerBgColor} cursor='pointer'>
                 <IoIosJournal/>
-                <Text fontWeight='600'>Journals</Text>
+                <Text fontWeight='600' fontSize='18px' >Journals</Text>
             </HStack>
         </VStack>
     );

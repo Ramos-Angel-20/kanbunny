@@ -1,3 +1,5 @@
+import { types } from '../types/projectsTypes';
+
 const initialProjectsState = {
     projects: [],
     tasks: {},
@@ -9,7 +11,14 @@ const initialProjectsState = {
 }
 
 export const projectsReducer = (state = initialProjectsState, action) => {
+    if (action.type === types.GET_PROJECTS) {
+        return {
+            ...state,
+            projects: action.payload.projects
+        };
+    }
+    
     return {
         ...state
-    }
+    };
 }
