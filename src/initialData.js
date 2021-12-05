@@ -45,6 +45,26 @@ const initialData = {
             id: '5',
             name: 'Proyecto Dummy 5'
         },
+        {
+            id: '1',
+            name: 'Este proyecto si sirve'
+        },
+        {
+            id: '2',
+            name: 'Proyecto Dummy 2'
+        },
+        {
+            id: '3',
+            name: 'Proyecto Dummy 3'
+        },
+        {
+            id: '4',
+            name: 'Proyecto Dummy 4'
+        },
+        {
+            id: '5',
+            name: 'Proyecto Dummy 5'
+        },
         
         
     ]

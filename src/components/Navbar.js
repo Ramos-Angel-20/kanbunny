@@ -25,7 +25,7 @@ const Navbar = () => {
     console.log(colorMode);
 
     return (
-        <Box minW='full' maxH='100px' h='auto' shadow='md' backgroundColor={containerBgColor}>
+        <Box minW='full' maxH='100px' h='auto' shadow='lg' backgroundColor={containerBgColor}>
             <Container maxW='1800px' w='90%'>
                 <Flex minW='full' px={0} py={2} align='center' justify='space-between'>
 

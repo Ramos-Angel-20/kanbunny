@@ -28,7 +28,7 @@ const Column = () => {
 
 
     return (
-        <VStack backgroundColor='gray.200' w='400px' h='auto' minH='150px' maxH='90%' borderRadius='lg' shadow='lg' justify='space-between' >
+        <VStack backgroundColor='gray.200' minW='400px' w='400px' h='auto' minH='150px' maxH='90%' borderRadius='lg' shadow='lg' justify='space-between' >
 
             {/* Titulo de la columna */}
             <Flex w='full' align='center' h='60px' justify='space-between' p={2}>
@@ -41,6 +41,30 @@ const Column = () => {
 
             {/* Espacio para el listado de tasks */}
             <VStack w='full' h='full' overflowY='auto' p={2}  flex={1}>
+                <Box backgroundColor='white' minH='100px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
+                <Box backgroundColor='white' minH='300px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
+                <Box backgroundColor='white' minH='200px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
+                <Box backgroundColor='white' minH='100px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
+                <Box backgroundColor='white' minH='100px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
+                <Box backgroundColor='white' minH='300px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
+                <Box backgroundColor='white' minH='200px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
+                <Box backgroundColor='white' minH='100px' w='full' borderRadius='lg' shadow='md'>
+
+                </Box>
                 <Box backgroundColor='white' minH='100px' w='full' borderRadius='lg' shadow='md'>
 
                 </Box>
