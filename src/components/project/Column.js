@@ -31,32 +31,30 @@ const Column = ({ column, tasks, index }) => {
     return (
         <Draggable draggableId={column.id} index={index} >
             {(provided) => (
-                <div ref={provided.innerRef} {...provided.draggableProps} >
-                    <VStack backgroundColor='gray.200' minW='400px' w='400px' h='auto' minH='150px' maxH='90%' borderRadius='lg' shadow='lg' justify='space-between'   >
+                <VStack ref={provided.innerRef} {...provided.draggableProps} backgroundColor='gray.200' minW='400px' w='400px' h='auto' minH='150px' maxH='90%' borderRadius='lg' shadow='lg' justify='space-between'   >
 
-                        {/* Titulo de la columna */}
-                        <Flex w='full' align='center' h='60px' justify='space-between' p={2} {...provided.dragHandleProps} >
-                            <Editable value={title} flex={1} maxW='80%' fontWeight='600' fontSize='20px' >
-                                <EditablePreview />
-                                <EditableInput onBlur={titleInputBlurHandler} onChange={titleInputChangeHandler} />
-                            </Editable>
-                            <IconButton icon={<BsThreeDots />} />
-                        </Flex>
+                    {/* Titulo de la columna */}
+                    <Flex w='full' align='center' h='60px' justify='space-between' p={2} {...provided.dragHandleProps} >
+                        <Editable value={title} flex={1} maxW='80%' fontWeight='600' fontSize='20px' >
+                            <EditablePreview />
+                            <EditableInput onBlur={titleInputBlurHandler} onChange={titleInputChangeHandler} />
+                        </Editable>
+                        <IconButton icon={<BsThreeDots />} />
+                    </Flex>
 
-                        {/* Espacio para el listado de tasks */}
-                        <VStack w='full' h='full' overflowY='auto' p={2} flex={1}>
+                    {/* Espacio para el listado de tasks */}
+                    <VStack w='full' h='full' overflowY='auto' p={2} flex={1}>
 
-                        </VStack>
-
-                        {/* Seccion donde esta la funcionalidad para agregar mas tasks */}
-                        <Flex p={2} w='full' direction='column' h='auto' maxH='180px'>
-                            <Collapse height='200px' startingHeight={0} in={inputBoxIsOpen}>
-                                <Textarea resize='none' h='full' variant='fill' placeholder='Your new task description' />
-                            </Collapse>
-                            <Button leftIcon={<BsPlusLg />} minH='40px' marginTop='10px' colorScheme='green' w='full' onClick={() => setInputBoxIsOpen(!inputBoxIsOpen)}>Add card</Button>
-                        </Flex>
                     </VStack>
-                </div>
+
+                    {/* Seccion donde esta la funcionalidad para agregar mas tasks */}
+                    <Flex p={2} w='full' direction='column' h='auto' maxH='180px'>
+                        <Collapse height='200px' startingHeight={0} in={inputBoxIsOpen}>
+                            <Textarea resize='none' h='full' variant='fill' placeholder='Your new task description' />
+                        </Collapse>
+                        <Button leftIcon={<BsPlusLg />} minH='40px' marginTop='10px' colorScheme='green' w='full' onClick={() => setInputBoxIsOpen(!inputBoxIsOpen)}>Add card</Button>
+                    </Flex>
+                </VStack>
             )}
         </Draggable>
     )
