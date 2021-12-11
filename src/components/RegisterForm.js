@@ -16,7 +16,7 @@ import { BsGithub } from 'react-icons/bs';
 
 import icon from '../assets/Kanbunny.svg';
 
-const RegisterForm = ({ toggleMode }) => {
+const RegisterForm = ({ toggleAuthMode }) => {
     return (
         <VStack h='full' justify='center' spacing='20px' width='100%'>
 
@@ -31,7 +31,7 @@ const RegisterForm = ({ toggleMode }) => {
                 <Text fontSize='3xl' fontWeight='900' textAlign='center'>Enter your info to get started!</Text>
             </Flex>
 
-            <Button onClick={toggleMode} variant='link' color='red.600' fontWeight='600' href='/login'>Already have an accout? Go to Log in!</Button>
+            <Button onClick={toggleAuthMode} variant='link' color='red.600' fontWeight='600' href='/login'>Already have an accout? Go to Log in!</Button>
 
             <FormControl>
                 <FormLabel>Your Name:</FormLabel>

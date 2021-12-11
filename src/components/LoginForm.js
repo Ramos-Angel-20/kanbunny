@@ -6,7 +6,7 @@ import { BsGithub } from 'react-icons/bs';
 import icon from '../assets/Kanbunny.svg';
 
 
-const LoginForm = ({ toggleMode }) => {
+const LoginForm = ({ toggleAuthMode }) => {
     return (
         <VStack h='full' justify='center' spacing='20px' width='100%'>
             <Flex direction='column' align='center'>
@@ -19,7 +19,7 @@ const LoginForm = ({ toggleMode }) => {
                 <Text fontSize='3xl' fontWeight='900' textAlign='center'>Sign in to your account</Text>
             </Flex>
 
-            <Button onClick={toggleMode} variant='link' color='red.600' fontWeight='600' href='/register'>Need an accout? Get One for free!</Button>
+            <Button onClick={toggleAuthMode} variant='link' color='red.600' fontWeight='600' href='/register'>Need an accout? Get One for free!</Button>
 
             <FormControl>
                 <FormLabel>Email:</FormLabel>

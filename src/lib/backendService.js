@@ -43,6 +43,7 @@ export const getProjects = async userId => {
     }
 }
 
+// Obtener un proyecto en especifico
 export const getProjectData = async projectId => {
     try {
 

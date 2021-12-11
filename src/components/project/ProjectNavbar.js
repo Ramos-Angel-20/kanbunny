@@ -2,7 +2,7 @@ import {
     Button,
     Flex,
     Container,
-    Heading,
+    Text,
     Box,
     Menu,
     MenuButton,
@@ -15,21 +15,29 @@ import {
 import { IoMdMoon } from 'react-icons/io';
 import { BiLogOut, BiUser, BiChevronDown } from 'react-icons/bi';
 import { BsFillSunFill } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
-import iconBg from '../assets/KanbunnyIconBack2.svg'
+import iconBg from '../../assets/KanbunnyIconBack2.svg'
 
-const Navbar = () => {
+const ProjectNavbar = ({ projectTitle }) => {
 
     const containerBgColor = useColorModeValue('gray.50', 'gray.700');
     const { toggleColorMode, colorMode } = useColorMode();
+    const navigate = useNavigate();
+
+    const homeRedirectHandler = () => {
+        localStorage.removeItem('project-id');
+        navigate('/projects');
+    }
 
     return (
         <Box minW='full' maxH='100px' h='auto' shadow='lg' backgroundColor={containerBgColor}>
             <Container maxW='1800px' w='90%'>
                 <Flex minW='full' px={0} py={2} align='center' justify='space-between'>
 
-                    <img src={iconBg} alt='Kanbunny' style={{ width: '40px', cursor: 'pointer' }} />
-
+                    <img src={iconBg} alt='Kanbunny' style={{ width: '40px', cursor: 'pointer' }} onClick={homeRedirectHandler} />
+                    <Text flex={1} fontWeight='800' fontSize='20px' paddingX={4} >{projectTitle}</Text>
 
                     <Flex align='center' justify='space-between' w='200px'>
                         <Menu>
@@ -63,4 +71,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default ProjectNavbar;

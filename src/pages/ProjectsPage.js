@@ -11,7 +11,7 @@ const ProjectsPage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(startGetProjects('38821df2-7287-40f4-a791-c8bfff0546b8'));
+        dispatch( startGetProjects('34f1d94f-86b1-4572-9d8c-e425713a4544') );
     });
 
     return (

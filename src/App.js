@@ -9,7 +9,7 @@ const App = () => {
     <Routes>
       <Route path='/account' element={<AuthPage />}/>
       <Route path='/projects' element={<ProjectsPage />}/>
-      <Route path='/project/project-slug' element={<ProjectPage />} />
+      <Route path='/projects/:projectId' element={<ProjectPage />} />
     </Routes>
   );
 }
