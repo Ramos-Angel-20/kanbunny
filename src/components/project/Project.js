@@ -1,5 +1,5 @@
 import { HStack } from '@chakra-ui/react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 import Column from './Column';
